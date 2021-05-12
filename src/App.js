@@ -1,7 +1,11 @@
-import {BrowserRouter, Switch, Route} from "reac-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from "./components/Header";
+import MainPage from "./components/MainPage";
+import Sessions from "./components/Sessions";
+import Seats from "./components/Seats";
 
-function App() {
+
+export default function App() {
     return(
         <BrowserRouter>
             <Switch>
@@ -9,10 +13,10 @@ function App() {
                 <Route path="/" exact>
                     <MainPage />
                 </Route>
-                <Route path="/sessoes/" exact>
+                <Route path="/sessoes/:sessionId" exact>
                     <Sessions />
                 </Route>
-                <Route path="/assentos/" exact>
+                <Route path="/assentos/:seatsId" exact>
                     <Seats />
                 </Route>
             </Switch>
