@@ -1,3 +1,4 @@
+import image3 from "../images/image3.jpg"
 export default function MainPage(){
 
 return(
@@ -7,8 +8,25 @@ return(
         </div>
 
         <div className="movie-box">
-            <img src="../src/images/image 3.jpg" alt="movie"></img>
+            <img src={image3} alt="movie"></img>
         </div>
+        <div className="movie-box">
+            <img src={image3} alt="movie"></img>
+        </div>
+        <div className="movie-box">
+            <img src={image3} alt="movie"></img>
+        </div>
+        <div className="movie-box">
+            <img src={image3} alt="movie"></img>
+        </div>
+        <div className="movie-box">
+            <img src={image3} alt="movie"></img>
+        </div>
+        <div className="movie-box">
+            <img src={image3} alt="movie"></img>
+        </div>
+
+
     </div>
 );
 }
