@@ -18,6 +18,7 @@ export default function Sessions(){
             <p className="session-title">Quinta-feira - 24/06/2021</p>
             <button className="session-hour">15:00</button>
             <button className="session-hour">15:00</button>
+            
             </div>
 
             <div className="session">

@@ -14,13 +14,13 @@ export default function App() {
     return(
         <BrowserRouter>
             <Header />
-            <Seats />
+            
             
             <Switch>  
 
-                {/* <Route path="/" exact>
+                <Route path="/" exact>
                     <MainPage />
-                </Route> */}
+                </Route>
 
                 <Route path="/sessoes/:sessionId" exact>
                     <Sessions />

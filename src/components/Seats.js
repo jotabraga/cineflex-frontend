@@ -64,7 +64,23 @@ export default function Seats(){
                 <li className="seat-id">01</li>
                 <li className="seat-id">01</li>
             </ul>
-            <div className="seats-subtitle"></div>
+            <div className="seats-subtitle">
+                <div className="subtitle">
+                <li className="seat-id selected-seat">S</li>
+                <p>Selecionado</p>
+                </div>
+
+                <div className="subtitle">
+                <li className="seat-id">D</li>
+                <p>Selecionado</p>
+                </div>
+
+                <div className="subtitle">
+                <li className="seat-id unavailable-seat">I</li>
+                <p>Selecionado</p>
+                </div>
+
+            </div>
 
 
 
@@ -78,7 +94,7 @@ export default function Seats(){
             <input type="text" className="user-info" placeholder="Digite seu CPF..." />
             </div>
 
-            {/* <button className="book-seats">Reservar assento(s)</button> */}
+            <button className="next-button">Reservar assento(s)</button>
 
 
             <div className="footer">
