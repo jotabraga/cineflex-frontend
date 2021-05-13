@@ -210,6 +210,15 @@ body {
     font-size: 13px;
     height: 45px;
 }
+.subtitle .seat-id{
+    border: 1px #000 solid;
+}
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .success-screen{
     display: flex;
     height: 630px;

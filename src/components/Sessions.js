@@ -23,9 +23,6 @@ export default function Sessions(){
             console.log(answer);    
         });
     }, [movieId]);
-
-    
-    console.log(sessions);
     
     return(
         <div className="session-selection-screen">
@@ -35,7 +32,7 @@ export default function Sessions(){
             </div>
             
 
-            {sessions.length === 0 ? "" : sessions.map((session) => <Session key={session.id} sessionId={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
+            {sessions.map((session) => <Session key={session.id} sessionId={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
 
             
 
