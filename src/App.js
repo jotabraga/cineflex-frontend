@@ -9,7 +9,6 @@ import "./styles/reset.css";
 import "./styles/styles.css";
 
 
-
 export default function App() {
     return(
         <BrowserRouter>
@@ -22,15 +21,15 @@ export default function App() {
                     <MainPage />
                 </Route>
 
-                <Route path="/sessoes/:sessionId" exact>
+                <Route path="/filme/:movieId" exact>
                     <Sessions />
                 </Route>
 
-                <Route path="/assentos/:seatsId" exact>
+                <Route path="/sessao/:sessionId" exact>
                     <Seats />
                 </Route>
 
-                <Route path="/success" exact>
+                <Route path="/sucesso" exact>
                     <Success />
                 </Route>
 

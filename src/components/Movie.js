@@ -6,11 +6,10 @@ export default function Movie(props){
 
     return(
 
-        <Link to="/filme/{id}"
-
+        <Link to={`/filme/${id}`}>
         
         <div className="movie-box">
-            <img src={movieImage} alt={id}></img>
+            <img src={movieImage} alt="movie"></img>
         </div>
 
         </Link>

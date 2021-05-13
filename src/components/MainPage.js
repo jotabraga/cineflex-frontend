@@ -3,6 +3,7 @@ import axios from "axios";
 import {useState, useEffect} from "react";
 import Movie from "./Movie";
 
+
 export default function MainPage(){
 
     const [movies, setMovies] = useState([]);
@@ -22,7 +23,7 @@ return(
             <p>Selecione o filme</p>
         </div>
 
-        {movies.map(movie => <Movie id={movie.id} movieImage={movie.posterURL} key={movie.id}/>)}
+        {movies.map(movie => <Movie id={movie.id} movieImage={movie.posterURL} key={movie.id} />)}
 
     </div>
 );

@@ -72,6 +72,12 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.10); 
     padding-left: 30px;
 }
+.footer p{
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 20px;
+    font-style: italic;
+}
 .footer .movie-box{
     height: 89px;
     width: 64px;
@@ -95,7 +101,8 @@ body {
     background: #fbb034;
     border-radius: 5px;
     border: 1px rgb(117, 117, 117) solid;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 12px;
     margin-bottom: 8px;
 }
@@ -115,6 +122,10 @@ body {
     margin: 0 auto;
 }
 .session-title{
+    height: 36px;
+    width: 130px;
+    display: flex;
+    flex-wrap: wrap;
     color: #fff;
     font-size: 18px;
     font-style: italic;
@@ -125,6 +136,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px #808f9d solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .user-info {
     width: 330px;    

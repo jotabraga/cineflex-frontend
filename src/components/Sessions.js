@@ -1,51 +1,52 @@
-import image3 from "../images/image3.jpg"
+import { useParams } from 'react-router-dom';
+import Session from "./Session";
+import {useState, useEffect} from "react";
+import axios from "axios";
+
 
 export default function Sessions(){
+
+    const { movieId } = useParams();
+    const [sessions, setSessions] = useState([]);
+    const [image, setImage] = useState("");
+    const [title, setTitle] = useState("title");
+
+    useEffect(() => {
+        
+        const promise = axios.get(`https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/movies/${movieId}/showtimes`);
+
+        promise.then((answer) => {
+            
+            setSessions([...answer.data.days]);
+            setImage(answer.data.posterURL);
+            setTitle(answer.data.title);
+            console.log(answer);    
+        });
+    }, [movieId]);
+
+    
+    console.log(sessions);
+    
     return(
         <div className="session-selection-screen">
 
             <div className="selection">
                 <p>Selecione o horário</p>
             </div>
-
-            <div className="session">
-            <p className="session-title">Quinta-feira - 24/06/2021</p>
-            <button className="session-hour">15:00</button>
-            <button className="session-hour">15:00</button>
-            </div>
-
-            <div className="session">
-            <p className="session-title">Quinta-feira - 24/06/2021</p>
-            <button className="session-hour">15:00</button>
-            <button className="session-hour">15:00</button>
             
-            </div>
 
-            <div className="session">
-            <p className="session-title">Quinta-feira - 24/06/2021</p>
-            <button className="session-hour">15:00</button>
-            <button className="session-hour">15:00</button>
-            </div>
+            {sessions.length === 0 ? "" : sessions.map((session) => <Session key={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
+
+            
 
             <div className="footer">
             <div className="movie-box">
-            <img src={image3} alt="movie"></img>
+            <img src={image} alt="movie"></img>
             </div>
-            <p>Enola Homes</p>
+            <p>{title}</p>
             </div>
 
            
-
-        {/* <p className="session-title">Quinta-feira - 24/06/2021</p>
-        <div className="all-sessions">
-        <button className="session-hour">15:00</button>
-        <button className="session-hour">15:00</button>
-        </div>
-        
-
-        <p className="session-title">Quinta-feira - 24/06/2021</p>
-        <button className="session-hour">15:00</button>
-        <button className="session-hour">15:00</button> */}
 
         </div>
     );
