@@ -35,7 +35,7 @@ export default function Sessions(){
             </div>
             
 
-            {sessions.length === 0 ? "" : sessions.map((session) => <Session key={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
+            {sessions.length === 0 ? "" : sessions.map((session) => <Session key={session.id} sessionId={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
 
             
 

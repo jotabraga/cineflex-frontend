@@ -63,7 +63,7 @@ body {
 .footer {
     display: flex;
     align-items: center;
-    height: 116px;
+    height: 105px;
     width: 100vw;
     position: fixed;
     left: 0;
@@ -81,6 +81,7 @@ body {
 .footer .movie-box{
     height: 89px;
     width: 64px;
+    margin-bottom: 4px;
 }
 .footer img{
     width: 48px;
@@ -97,6 +98,7 @@ body {
     justify-content: space-between;
 }
 
+
 .session-selection-screen button{
     background: #fbb034;
     border-radius: 5px;
@@ -111,6 +113,9 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+.seats-selection-screen .selection{
+    height: 70px;
+}
 .next-button{
     font-size: 18px;
     width: 220px;
@@ -119,7 +124,9 @@ body {
     color: #000;
     border-radius: 15px;
     border: 1px #000 solid;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 .session-title{
     height: 36px;
@@ -140,10 +147,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+.info{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.info p{
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
 .user-info {
     width: 330px;    
-    height: 25px;
-    margin: 0 auto;
+    height: 25px;    
 }
 .seats{
     min-width: 327px;
@@ -171,9 +188,10 @@ body {
 .seats-subtitle{
     display: flex;
     width: auto;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;    
+    height: 45px;
     justify-content: center;
-
 }
 .selected-seat{
     background: #fbb034;
@@ -190,7 +208,7 @@ body {
     margin-right: 8px;
     color: #fff;
     font-size: 13px;
-    margin-bottom: 30px;
+    height: 45px;
 }
 .success-screen{
     display: flex;

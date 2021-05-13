@@ -1,4 +1,7 @@
 import image3 from "../images/image3.jpg"
+import {useState, useEffect} from "react";
+import axios from "axios";
+import { useParams } from 'react-router-dom';
 
 export default function Seats(){
     return(
@@ -84,15 +87,15 @@ export default function Seats(){
 
 
 
-            <div className="session">
-            <p className="session-title">Nome do comprador:</p>
+            <div className="info">
+            <p>Nome do comprador:</p>
             <input type="text" className="user-info" placeholder="Digite seu nome..." />
             </div>
 
-            <div className="session">
-            <p className="session-title">CPF do comprador:</p>
+            <div className="info">
+            <p>CPF do comprador:</p>
             <input type="text" className="user-info" placeholder="Digite seu CPF..." />
-            </div>
+            </div> 
 
             <button className="next-button">Reservar assento(s)</button>
 

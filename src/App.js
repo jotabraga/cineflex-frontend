@@ -12,11 +12,9 @@ import "./styles/styles.css";
 export default function App() {
     return(
         <BrowserRouter>
-            <Header />
-            
+            <Header />            
             
             <Switch>  
-
                 <Route path="/" exact>
                     <MainPage />
                 </Route>
@@ -25,14 +23,13 @@ export default function App() {
                     <Sessions />
                 </Route>
 
-                <Route path="/sessao/:sessionId" exact>
+                <Route path="/assentos/:sessionId" exact>
                     <Seats />
                 </Route>
 
                 <Route path="/sucesso" exact>
                     <Success />
                 </Route>
-
             </Switch>
         </BrowserRouter>
     );
