@@ -9,10 +9,12 @@ export default function Seats(props){
     const { sessionId } = useParams();
     const [seats, setSeats] = useState([]);
     const [selected, setSelected] = useState([]);
+    const [seatnum, setSeatnum] = useState([]);
     const [image, setImage] = useState("Image");
     const [title, setTitle] = useState("Title");
     const [weekday, setWeekday] = useState("Weekday");
     const [day, setDay] = useState("Day");
+    const [hour, setHour] = useState("Hour");
     const [name, setName] = useState("");
     const [cpf, setCpf] = useState("");
 
@@ -22,14 +24,9 @@ export default function Seats(props){
             name: name,
             cpf: cpf
         }
-        
-
-        
-        console.log(finalOrder);
         axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/seats/book-many",finalOrder);
         setName("");
         setCpf("");
-
     }
 
     function selectSeat(condition){
@@ -37,6 +34,7 @@ export default function Seats(props){
             alert ("Assento indisponível");
         }else{
             setSelected(true);
+            setSeatnum(true);
         }
     }
 
@@ -50,13 +48,10 @@ export default function Seats(props){
             setTitle(answer.data.movie.title);
             setWeekday(answer.data.day.weekday);
             setDay(answer.data.day.date);   
-            
-            const newSeats = answer.data.seats.map((seat) => ({...seat, selected:false}));
-            setSeats(newSeats);             
+            setHour(answer.data.name);
+            setSeats(answer.data.seats);                        
         });
-    }, [sessionId]);
-
-    
+    }, [sessionId]);    
 
     return(
         <div className="seats-selection-screen">
@@ -66,7 +61,8 @@ export default function Seats(props){
             </div>
 
             <ul className="seats">
-                {seats.map((seat) => <Seat key={seat.id} seatId={seat.id} selectSeat={selectSeat} selected={selected} setSelected={setSelected} seatName={seat.name} seatCondition={seat.isAvailable} />)}                
+                {seats.map((seat) => <Seat key={seat.id} seatId={seat.id} selectSeat={selectSeat} seatnum={seatnum} setSeatnum={setSeatnum}
+                selected={selected} setSelected={setSelected} seatName={seat.name} seatCondition={seat.isAvailable} />)}                
             </ul>
 
             <div className="seats-subtitle">
@@ -98,19 +94,20 @@ export default function Seats(props){
                 type="text" className="user-info" placeholder="Digite seu CPF..." />
             </div> 
 
-            <Link to={{pathname: "/sucesso", data: {title, day, selected, name, cpf}}}>
+            <Link  to={{pathname: "/sucesso", data: {title, day, seatnum, weekday, hour, name, cpf}}} >  {/* passagem de info via useLocatio */}
                 <button onClick={closeOrder} className="next-button">Reservar assento(s)</button>
             </Link>
 
 
             <div className="footer">
+                
                 <div className="movie-box">
                     <img src={image} alt="movie"></img>
                 </div>
                 <div className="movie-info">
-                    <p>{title}</p>
-                    <p>{weekday}</p>
+                    <p>{title}</p>                    
                     <p>{day}</p>
+                    <p>{hour}</p>
                 </div>
             
             </div>

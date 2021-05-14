@@ -80,16 +80,13 @@ body {
     width: 48px;
     height: auto;
 }
-.movie-selection-screen, .session-selection-screen, .seats-selection-screen {
+.movie-selection-screen, .session-selection-screen, .seats-selection-screen, .success-screen{
     width: 100vw;
     height: auto;
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-.seats-selection-screen .footer{
     justify-content: space-between;
 }
 .session-selection-screen button{
@@ -106,10 +103,7 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-.seats-selection-screen .selection{
-    height: 70px;
-}
-.next-button{
+.next-button, .book-button{
     font-size: 18px;
     width: 220px;
     height: 40px;
@@ -120,6 +114,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+}
+.seats-selection-screen a{
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
 }
 .session-title{
     height: 36px;
@@ -152,8 +151,15 @@ body {
     font-size: 16px;
 }
 .user-info {
-    width: 330px;    
-    height: 25px;    
+    width: 80vw;    
+    height: 25px;  
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 12px;
+}
+.info{
+    margin-left: auto;
+    margin-right: auto;
 }
 .seats{
     min-width: 327px;
@@ -184,6 +190,8 @@ body {
     margin-left: auto;
     margin-right: auto;    
     height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: center;
 }
 .selected-seat{
@@ -210,13 +218,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-right: 60px;
+    align-items: left;
+    margin-left: 35px;
 }
-.success-screen{
+.success-info{
+    color: #e5e5e5;
+    font-size: 18px;
+}
+.conference{
     display: flex;
-    height: 630px;
     flex-direction: column;
+    align-items: left;
+    height: 430px;
     justify-content: space-between;
-    align-items: center;
 }
+.conference .session-title{
+    height: auto;
+    margin-top: 30px;
+    font-size: 22px;
+    width: auto;
+}
+.success-screen a{
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+
+

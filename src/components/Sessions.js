@@ -3,7 +3,6 @@ import Session from "./Session";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
-
 export default function Sessions(){
 
     const { movieId } = useParams();
@@ -19,8 +18,7 @@ export default function Sessions(){
             
             setSessions([...answer.data.days]);
             setImage(answer.data.posterURL);
-            setTitle(answer.data.title);
-            console.log(answer);    
+            setTitle(answer.data.title);   
         });
     }, [movieId]);
     
@@ -35,10 +33,12 @@ export default function Sessions(){
             weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
 
             <div className="footer">
-            <div className="movie-box">
-            <img src={image} alt="movie"></img>
-            </div>
-            <p>{title}</p>
+
+                <div className="movie-box">
+                    <img src={image} alt="movie"></img>
+                </div>
+                <p>{title}</p>
+                
             </div>
 
            

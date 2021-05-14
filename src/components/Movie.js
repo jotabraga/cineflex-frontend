@@ -8,11 +8,10 @@ export default function Movie(props){
 
         <Link to={`/filme/${id}`}>
         
-        <div className="movie-box">
-            <img src={movieImage} alt="movie"></img>
-        </div>
+            <div className="movie-box">
+                <img src={movieImage} alt="movie"></img>
+            </div>
 
         </Link>
-
     );
 }

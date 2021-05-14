@@ -7,8 +7,6 @@ import Success from "./components/Success";
 import "./styles/reset.css";
 import "./styles/styles.css";
 
-
-
 export default function App() {
 
     return(
@@ -16,6 +14,7 @@ export default function App() {
             <Header />            
             
             <Switch>  
+
                 <Route path="/" exact>
                     <MainPage />
                 </Route>
@@ -31,7 +30,9 @@ export default function App() {
                 <Route path="/sucesso" exact>
                     <Success />
                 </Route>
+
             </Switch>
+            
         </BrowserRouter>
     );
 }

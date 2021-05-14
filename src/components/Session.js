@@ -11,8 +11,7 @@ export default function Session(props){
 
             {showtimes.map((hour) => {
                 return <Link to={`/assentos/${hour.id}`} key={hour.id} ><button  className="session-hour"><strong>{hour.name}</strong></button></Link> 
-            })
-            }
+            })}
             
         </div>
     );
