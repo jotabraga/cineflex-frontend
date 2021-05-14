@@ -2,8 +2,9 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import Seat from "./Seat";
+import { Link } from "react-router-dom";
 
-export default function Seats(){
+export default function Seats(props){
 
     const { sessionId } = useParams();
     const [seats, setSeats] = useState([]);
@@ -12,12 +13,23 @@ export default function Seats(){
     const [title, setTitle] = useState("Title");
     const [weekday, setWeekday] = useState("Weekday");
     const [day, setDay] = useState("Day");
+    const [name, setName] = useState("");
+    const [cpf, setCpf] = useState("");
 
     function closeOrder(){
         const finalOrder = {
-            ids: selected
+            ids: selected,
+            name: name,
+            cpf: cpf
         }
+        
+
+        
+        console.log(finalOrder);
         axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/seats/book-many",finalOrder);
+        setName("");
+        setCpf("");
+
     }
 
     function selectSeat(condition){
@@ -38,11 +50,9 @@ export default function Seats(){
             setTitle(answer.data.movie.title);
             setWeekday(answer.data.day.weekday);
             setDay(answer.data.day.date);   
-            console.log(answer.data);
-
-            const newSeats = answer.data.seats.map((seat) => ({...seat, selected:false}));
-            setSeats(newSeats);         
             
+            const newSeats = answer.data.seats.map((seat) => ({...seat, selected:false}));
+            setSeats(newSeats);             
         });
     }, [sessionId]);
 
@@ -77,16 +87,20 @@ export default function Seats(){
             </div>
 
             <div className="info">
-                <p>Nome do comprador:</p>
-                <input type="text" className="user-info" placeholder="Digite seu nome..." />
+                <p>Nome do comprador :</p>
+                <input type="text" onChange={e => setName(e.target.value)} value={name}
+                 className="user-info" placeholder="Digite seu nome..." />
             </div>
 
             <div className="info">
-                <p>CPF do comprador:</p>
-                <input type="text" className="user-info" placeholder="Digite seu CPF..." />
+                <p>CPF do comprador :</p>
+                <input onChange={e => setCpf(e.target.value)} value={cpf}
+                type="text" className="user-info" placeholder="Digite seu CPF..." />
             </div> 
 
-            <button onClick={closeOrder} className="next-button">Reservar assento(s)</button>
+            <Link to={{pathname: "/sucesso", data: {title, day, selected, name, cpf}}}>
+                <button onClick={closeOrder} className="next-button">Reservar assento(s)</button>
+            </Link>
 
 
             <div className="footer">

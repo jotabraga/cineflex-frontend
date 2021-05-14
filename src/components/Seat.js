@@ -5,8 +5,8 @@ export default function Seat(props){
     
     function selectSeat(condition, id){
        
-        if(condition === "true"){
-            
+        if(condition === false){
+
             alert("Assento indisponível");
 
         }if(selected.includes(seatId) === true){
@@ -20,11 +20,9 @@ export default function Seat(props){
             setSelected(newSelection);
         }
     }
-    
-
     return (
 
-        <li className={seatCondition === "false" ? "seat-id unavailable-seat" : (selected.includes(seatId) === true ? "seat-id selected-seat" : "seat-id")} 
+        <li className={seatCondition === false ? "seat-id unavailable-seat" : (selected.includes(seatId) === true ? "seat-id selected-seat" : "seat-id")} 
         onClick={() => selectSeat(seatCondition, seatId)}>{seatName}</li>
 
     );

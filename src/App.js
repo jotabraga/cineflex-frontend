@@ -1,5 +1,4 @@
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Sessions from "./components/Sessions";
@@ -9,7 +8,9 @@ import "./styles/reset.css";
 import "./styles/styles.css";
 
 
+
 export default function App() {
+
     return(
         <BrowserRouter>
             <Header />            

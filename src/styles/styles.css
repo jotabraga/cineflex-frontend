@@ -1,7 +1,6 @@
 * {
     transition: all ease .2s;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url('../images/background.jpg');
@@ -9,7 +8,6 @@ body {
     background-attachment: fixed;
     margin-top: 67px;
 }
-
 .header {
     background: #e5e5e5;
     color: rgb(95, 14, 14);
@@ -23,13 +21,11 @@ body {
     justify-content: center;   
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.09); 
 }
-
 .header p{
     font-size: 34px;
     font-style: italic;
     font-weight: bold;
 }
-
 .selection {
     width: 100vw;
     height: 90px;
@@ -37,14 +33,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .selection p{
     font-size: 24px;
     font-style: italic;
     font-weight: bold;
     color: #fff;
 }
-
 .movie-box {
     width: 145px;
     height: 209px;
@@ -55,7 +49,6 @@ body {
     padding: 8px;
     margin-bottom: 12px;
 }
-
 .movie-box img{
     width: 129px;
     height: auto;
@@ -87,7 +80,6 @@ body {
     width: 48px;
     height: auto;
 }
-
 .movie-selection-screen, .session-selection-screen, .seats-selection-screen {
     width: 100vw;
     height: auto;
@@ -97,8 +89,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-
+.seats-selection-screen .footer{
+    justify-content: space-between;
+}
 .session-selection-screen button{
     background: #fbb034;
     border-radius: 5px;
@@ -218,6 +211,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-right: 60px;
 }
 .success-screen{
     display: flex;

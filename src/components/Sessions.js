@@ -29,12 +29,10 @@ export default function Sessions(){
 
             <div className="selection">
                 <p>Selecione o horário</p>
-            </div>
-            
+            </div>            
 
-            {sessions.map((session) => <Session key={session.id} sessionId={session.id} weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
-
-            
+            {sessions.map((session) => <Session key={session.id} sessionId={session.id} 
+            weekday={session.weekday} date={session.date} showtimes={session.showtimes} />)}
 
             <div className="footer">
             <div className="movie-box">
