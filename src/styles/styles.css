@@ -91,6 +91,7 @@ body {
 }
 .seats-selection-screen, .seats-selection-screen{
     height: 100vh - 172px;
+    overflow-y: scroll;
 }
 .seats-selection-screen .selection, .session-selection-screen .selection{
     height: 80px;
