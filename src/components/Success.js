@@ -28,7 +28,7 @@ export default function Success(){
                 
             </div>
             <Link to={"/"}>
-            <button className="next-button">Voltar pra Home</button>s
+            <button className="next-button">Voltar pra Home</button>
             </Link>        
 
         </div>

@@ -90,8 +90,7 @@ body {
     justify-content: space-between;    
 }
 .seats-selection-screen, .seats-selection-screen{
-    margin-bottom: 100px;
-    overflow-y: scroll;
+    height: 100vh - 67px;
 }
 .seats-selection-screen .selection, .session-selection-screen .selection{
     height: 80px;
