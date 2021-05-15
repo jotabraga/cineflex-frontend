@@ -87,8 +87,11 @@ body {
     padding-right: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between;    
+}
+.seats-selection-screen, .seats-selection-screen{
     overflow-y: scroll;
+    margin-bottom: 105px;
 }
 .session-selection-screen button{
     background: #fbb034;
