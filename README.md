@@ -1,8 +1,8 @@
 # Cineflex :cinema:
 A app to choose and buy cinema tickets 🎥
 ## Preview 👀
-![E-Wallet_preview](./src/assets/e-wallet.gif) 
-#### [Click here and try it now!](https://ewallet-frontend-bfxrctsnu-jotabraga.vercel.app/)
+![Cineflex_preview](./src/assets/cineflex.gif) 
+#### [Click here and try it now!](https://project-cineflex-jotabraga.vercel.app/)
 ## About 🔎
 This is an web aplication wich students can share their old tests and find the one they need.
 ### Implemented features :heavy_check_mark:
